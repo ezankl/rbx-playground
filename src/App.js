@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
 
-function App() {
+import "rbx/index.css";
+import { Content, Button, Column, Notification } from "rbx";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="columns">
+      <div className="column is-one-third">
+        <Notification color="primary" textAlign="centered">
+          Column 1
+        </Notification>
+      </div>
+      <div className="column">
+        <Notification color="primary" textAlign="centered">
+          Column 2.1
+        </Notification>
+        <Notification color="primary" textAlign="centered">
+          Column 2.2
+        </Notification>
+      </div>
     </div>
   );
 }
-
-export default App;
